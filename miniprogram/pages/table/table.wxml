@@ -1,0 +1,40 @@
+<!-- 监听自定义事件 -->
+<Tabs tabs="{{tabs}}" bind:tabsItemChange="handleTabsItemChange">
+  <view class="title">
+    <view>时间段</view>
+    <view>计划</view>
+  </view>
+  <checkbox-group bindchange="handleSelChange">
+    <view class="items" wx:for="{{itemsArr}}" wx:key="index">
+      <checkbox class="{{select ? 'sel_ckbox' : 'unsel_ckbox'}}" value="{{index}}" checked="{{selSingle}}"></checkbox>
+      <input class="input_box" placeholder="请输入24小时制区间" bindblur="outInputTime" type="text" value="{{item.itemTime}}" data-index="{{index}}" />
+      <textarea class="input_box" placeholder="请输入计划内容" bindtap="inputItem" bindblur="outInputItem" maxlength="150"
+        value="{{item.itemVal}}" data-index="{{index}}" />
+    </view>
+  </checkbox-group>
+</Tabs>
+<!-- 上传更新 -->
+<view class="iconfont icon-shangchuan upload" bindtap="handleUpload"></view>
+<!-- 底部工具栏 -->
+<view class="btm_tool">
+  <view class="btm_item {{select ? 'sel_color' : ''}}">
+    <view class="{{itemsArr.length==selectedIndex.length && selAll ? 'selall_color' : 'unselall_color'}} {{select ? 'sel_all' : 'unsel_all'}}" bindtap="handleSelAll">
+      <view class="iconfont icon-quanxuan"></view>
+      <view>全选</view>
+    </view>
+    <view class="btm_btn" bindtap="handleSelect">
+      <view class="iconfont icon-xuanze"></view>
+      <view>选择</view>
+    </view> 
+  </view>
+  <view class="btm_item">
+    <view class="iconfont icon-tianjia add_btn" bindtap="handleNewSchedule"></view>
+    <view class="add_tip">添加</view>
+  </view>
+  <view class="btm_item {{selectedIndex.length>0 ? 'sel_del_color':''}}">
+    <view class="btm_btn"  bindtap="handleDelete">
+      <view class="iconfont icon-shanchu"></view>
+      <view>删除</view>
+    </view>
+  </view>
+</view>

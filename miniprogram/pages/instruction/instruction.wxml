@@ -1,0 +1,20 @@
+<view id="context">
+  <view class="items">
+    <view>计划表页面：</view>
+    <view>添加计划项，请输入24小时制区间，示例：9:00-15:00 或 09:00-15:00，此外还必须输入计划内容。</view>
+    <view>设置好所有的计划项后，请点击右下角的“上传按钮”，上传到云端，否则可能会造成数据丢失！</view>
+  </view>
+  <view class="items">
+    <view>纪念日和提醒事项页面：</view>
+    <view>向左滑动条目可以显示“删除”按钮，点击以删除条目。</view>
+  </view>
+  <view class="items">
+    <view>新建纪念日和新建提醒事项页面：</view>
+    <view>点击右侧的时间可以选择提醒日期和时间。</view>
+  </view>
+  <view class="items">
+    <view>“我的”页面：</view>
+    <view>点击“开启/关闭订阅消息：</view>
+    <view>注意，由于某些特殊限制，本小程序无法实现一次订阅，每天发送订阅消息。点击一次，只能到时间自动发送一条点阅消息，给您带来不便请谅解。</view>
+  </view>
+</view>

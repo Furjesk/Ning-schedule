@@ -1,0 +1,23 @@
+<view class="container">
+  <form action="" bindsubmit="formSubmit" bindreset="formReset">
+    <view>新增纪念日：</view>
+    <label class="items" for="">
+      <input class="setItems" name="remind" placeholder="请输入纪念内容" value="{{itemVal}}" bindinput="handleTextInput" />
+      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime"
+        bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+        <view class="setTime">
+          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}}
+        </view>
+      </picker>
+    </label>
+    <button form-type="submit">点击提交</button>
+  </form>
+</view>
+<!-- 引导页 -->
+<view class="guide" wx:if="{{guideIndex==0}}">
+  <view class="iconfont icon-jiantou icon_loc1"></view>
+  <view class="tip_text1">点击这里输入内容</view>
+  <view class="iconfont icon-jiantou icon_loc2"></view>
+  <view class="tip_text2">点击这里选择提醒时间</view>
+  <view class="iconfont icon-zhidaoliaox tip_text3" bindtap="handleKnow"></view>
+</view>

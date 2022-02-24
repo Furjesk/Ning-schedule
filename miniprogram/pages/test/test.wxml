@@ -1,0 +1,1 @@
+<button plain bindtap="test">点我测试</button>

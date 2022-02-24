@@ -1,0 +1,32 @@
+<view class="nzx_index">
+  <block wx:if="{{memoryArr.length>0}}">
+    <view class="memory_day tip_style" bindtap="handleSetMemday">
+      <swiper autoplay circular indicator-dots indicator-color="#fff" indicator-active-color="#dcb9f5">
+        <swiper-item wx:for="{{memoryArr}}" wx:key="index">
+          <view>{{item.itemVal}}</view>
+          <view class="memory_time">{{item.timeStr}}</view>
+          <view>距现在{{item.surplusday}}天</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="memory_day tip_style" bindtap="handleSetMemday">\n亲 还没有设置纪念日\n点击这里去添加</view>
+  </block>
+  <view class="task tip_style" bindtap="handleSetTable">
+    <view>当前任务</view>
+    <view class="items" wx:for="{{nowScheduleArr}}" wx:key="index">
+      <view>{{item.itemTime}}</view>
+      <view>{{item.itemVal}}</view>
+    </view>
+  </view>
+  <view class="tip_style remind" bindtap="handleSetRemind">
+    <view>提醒事项</view>
+    <view class="remind_items" wx:for="{{remindArr}}" wx:key="index">
+      <view>{{item.itemVal}}</view>
+      <view>{{item.timeStr}}{{item.isPerpetual?"，每天":""}}</view>
+    </view>
+  </view>
+  <view class="surplus_month tip_style">本月剩余\n<text>{{monthSurplus}}</text>天</view>
+  <view class="surplus_year tip_style">今年剩余\n<text>{{yearSurplus}}</text>天</view>
+</view>

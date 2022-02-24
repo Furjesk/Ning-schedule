@@ -1,0 +1,106 @@
+.items,.title {
+  display: flex;
+}
+.title view {
+  flex: 1;
+  padding: 10rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  font-weight: bold;
+}
+.input_box {
+  flex: 1;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.title :last-child {
+  border-left: 1rpx solid #ccc;
+}
+.items :last-child {
+  border-left: 1rpx solid #ccc;
+}
+/* 上传按钮 */
+.upload{
+  position: fixed;
+  font-size: 60rpx;
+  bottom: 150rpx;
+  right: 20rpx;
+  color: rgb(58, 219, 224);
+}
+/* 底部工具栏 */
+.btm_tool {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(227, 242, 243, 0.425);
+  height: 110rpx;
+}
+.btm_item {
+  flex: 1;
+  display: flex;
+  /* padding-bottom: 30rpx; */
+  /* padding-top: 40rpx; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btm_btn {
+  display: flex;
+  padding: 5rpx 10rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add_btn {
+  font-size: 100rpx;
+  position: absolute;
+  transform: translateY(-50rpx);
+  background-color: rgba(227, 242, 243, 0.425);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  color: rgb(0, 183, 255);
+}
+.add_tip {
+  position: relative;
+  top: 20rpx;
+}
+/* 选择 */
+.unsel_ckbox {
+  display: none;
+}
+.wx-radio-input, .wx-checkbox-input {
+  width: 30rpx !important;
+  height: 30rpx !important;
+}
+.sel_ckbox {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 5rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.sel_color {
+  color: #08da16;
+}
+.sel_del_color {
+  color: #f31515;
+}
+.unsel_all {
+  display: none;
+}
+.sel_all {
+  display: flex;
+  position: absolute;
+  bottom: 120rpx;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx;
+  background-color: rgba(227, 242, 243, 0.425);
+}
+.selall_color {
+  color: #08da16;
+}
+.unselall_color {
+  color: #000;
+}

@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 10rpx;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+}
+.setItems {
+  flex: 3;
+}
+.setTime {
+  flex: 1;
+  display: flex;
+  margin-top: 10rpx;
+  margin-right: 25rpx;
+}
+.item {
+  flex: 3;
+}
+.time {
+  flex: 1;
+  display: flex;
+  margin-top: 10rpx;
+  margin-right: 25rpx;
+}
+button {
+  font-size: 18rpx;
+  width: 200rpx;
+  background-color: var(--themeColor);
+}
+.guide {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(22, 23, 24, 0.5);
+}
+.icon_loc1 {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  color: #fff;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .tip_text1 {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  background-color: #27c084;
+  padding: 15rpx 30rpx;
+  border-radius: 35rpx;
+  color: #fff;
+}
+.guide .icon_loc2 {
+  position: absolute;
+  top: 8%;
+  right: 15%;
+  color: #fff;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .tip_text2 {
+  position: absolute;
+  top: 13%;
+  right: 6%;
+  background-color: #27c084;
+  padding: 15rpx 30rpx;
+  border-radius: 35rpx;
+  color: #fff;
+}
+.guide .icon_loc3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
+  border: 2rpx solid #fff;
+  padding: 15rpx 30rpx;
+  border-radius: 40rpx;
+  color: #fff;
+}
+
+.guide .tip_text3 {
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 80rpx;
+  color: #fff;
+}

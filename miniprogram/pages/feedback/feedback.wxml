@@ -1,0 +1,25 @@
+<view class="fb_main">
+  <view class="fd_title">问题的种类</view>
+  <view class="fd_tips">
+    <text bindtap="handleSuggestion" value="功能建议">功能建议</text>
+    <text bindtap="handleProblem">性能问题</text>
+    <text bindtap="handleOthers">其他</text>
+  </view>
+  <view class="fd_content">
+    <textarea value="{{textVal}}" bindinput="handleTextInput" placeholder="请描述一下您的问题"></textarea>
+    <view class="fd_tool">
+      <button bindtap="handleChooseImg">+</button>
+      <!-- 简单数组绑定的key是*this！！ -->
+      <view class="up_img_item" wx:for="{{chooseImgs}}" wx:key="*this" bindtap="handleRemoveImg" data-index="{{index}}">
+        <!-- 自定义组件UpImg -->
+        <UpImg src="{{item}}"></UpImg>
+      </view>
+    </view>
+  </view>
+  <view class="form_btn_wrap">
+    <button bindtap="handleFormSubmit" type="warn">
+      <icon type="success_no_circle" size="16" color="rgb(214, 86, 240)"></icon>
+      提交
+    </button>
+  </view>
+</view>

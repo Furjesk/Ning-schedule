@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="button" bindtap="handleNewRemind">新增事项</view>
+  <view class="content">
+    <view class="tip">事项：
+      <view class="items {{item.isTouchMove ? 'touch_move_active' : ''}} {{item.isOverDate==true ? 'over_date':''}}" wx:for="{{items}}" wx:key="index">
+        <view class="item_left" data-index="{{index}}" bind:touchstart="touchStart" bind:touchmove="touchMove">
+          <view class="item">{{item.itemVal}}</view>
+          <view class="time">{{item.timeStr}}{{item.isPerpetual ?'，每天':''}}</view>
+        </view>
+        <view class="delete" data-id="{{index}}" bindtap="delItem">删除</view>
+      </view>
+    </view>
+  </view>
+</view>

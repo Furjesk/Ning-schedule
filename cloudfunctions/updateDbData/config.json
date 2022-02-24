@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "openapi": [
+    ]
+  },
+  "triggers": [
+    {
+      "name": "memoTrigger",
+      "type": "timer",
+      "config": "1 0 0 * * * *"
+    }
+  ]
+}

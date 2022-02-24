@@ -1,0 +1,105 @@
+<view class="user_info_wrap">
+  <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+    <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_base">
+        <view class="iconfont {{userInfo.gender==0?'male icon-nansheng':'female icon-nvsheng1'}}"></view>
+        <view class="user_name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <button class="login_btn" type="primary" plain catchtap="handleGetUserProfile">登录</button>
+  </view>
+</view>
+
+<view class="nzx_mine">
+  <!-- 上部工具栏 -->
+  <view class="top_tool">
+    <button class="tool_item first_btn" open-type="contact">
+      <view class="iconfont icon-lianxikefu"></view>
+      <view>联系客服</view>
+    </button>
+    <!-- <button bindtap="handleFeedback" class="tool_item">
+      <view class="iconfont icon-yijianfankui"></view>
+      <view>意见反馈</view>
+    </button> -->
+    <button open-type="feedback" class="tool_item">
+      <view class="iconfont icon-yijianfankui"></view>
+      <view>意见反馈</view>
+    </button>
+    <button bindtap="handleExit" class="tool_item">
+      <view class="iconfont icon-exit5-copy"></view>
+      <view>退出登录</view>
+    </button>
+    <view class="tool_item last_btn">
+      <button class="clear_btn {{clearBtn?'clear_color':''}}" bindtap="handleclear">
+        <view class="iconfont icon-qingchuhuancun"></view>
+        <view>清除缓存</view>
+      </button>
+      <view class="{{clearBtn?'clear_all':'clear_untap'}}" bindtap="handleClearAll">清除全部</view>
+      <view class="{{clearBtn?'clear_part':'clear_untap'}} {{clearPart?'part_color':''}}" bindtap="handleClPart">清除部分</view>
+      <view class="{{clearPart?'part_tap':'part_untap'}}">
+        <view class="part_item" bindtap="handleClearTable">清除计划表</view>
+        <view class="part_item" bindtap="handleClearMemory">清除纪念日</view>
+        <view class="part_item" bindtap="handleClearRemind">清除提醒事项</view>
+      </view>
+
+    </view>
+  </view>
+  <!-- 跳转按钮 -->
+  <view class="set_tool">
+    <view class="tap_style" bindtap="handleSetTable">
+      <view class="iconfont icon-jihuabiao1"></view>
+      <view>计划表</view>
+    </view>
+    <view class="tap_style" bindtap="handleSetRemind">
+      <view class="iconfont icon-tixingshixiang"></view>
+      <view>提醒事项</view>
+    </view>
+    <view class="set_memday tap_style" bindtap="handleSetMemday">
+      <view class="iconfont icon-jinianri8"></view>
+      <view>设置纪念日</view>
+    </view>
+    <view class="tap_style" bindtap="handleInstrution">
+      <view class="iconfont icon-bangzhu"></view>
+      <view>帮助说明</view>
+    </view>
+  </view>
+
+  <view class="setting">
+    <view>开启/关闭订阅消息</view>
+  <switch checked="{{isAccept?'true':''}}" color="var(--themeColor)" bindchange="switch_change"></switch>
+  </view>
+</view>
+
+<!-- 引导页 -->
+<view class="guide" wx:if="{{guideIndex==0}}">
+  <!-- <view class="iconfont icon-jiantou-copy icon_loc1"></view>
+  <view class="tip_text1">意见反馈待完善，请使用“联系客服”</view> -->
+  <view class="iconfont icon-jiantou icon_loc2"></view>
+  <view class="tip_text2">清除缓存的数据不可恢复，请谨慎操作</view>
+  <view class="icon_loc3" bindtap="handleNext">
+    <view class="iconfont icon-xiayige1"></view>
+    <view class="tip_text3">下一个</view>
+  </view>
+</view>
+<view class="guide" wx:elif="{{guideIndex==1}}">
+  <view class="iconfont icon-jiantou1 icon2_loc1"></view>
+  <view class="iconfont icon-jiantou2 icon2_loc2"></view>
+  <view class="iconfont icon-zhidaoliaox know_icon" bindtap="handleKnow"></view>
+  <view class="step">
+    <view class="num">1</view>
+    <view class="tip2_text1">点击“清除缓存”</view>
+  </view>
+  <view class="step">
+    <view class="num">2</view>
+    <view class="tip2_text1">点击“清除全部”可选择清除除登录状态的所有缓存</view>
+  </view>
+  <view class="step">
+    <view class="num">3</view>
+    <view class="tip2_text1">点击“清除部分”可选择清除部分缓存</view>
+  </view>
+  <view class="img"></view>
+</view>

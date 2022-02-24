@@ -1,0 +1,286 @@
+page {
+  background-color: #f1ededa8;
+}
+.user_info_wrap {
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  height: 45vh;
+  width: 100%;
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_base .male {
+  color: #67c2ff;
+}
+.user_info_wrap .user_img_wrap .user_info .user_base .female {
+  color: #ff5c91;
+}
+.user_info_wrap .user_img_wrap .user_info .user_base .user_name {
+  color: #fff;
+  margin: auto 10rpx;
+}
+.user_info_wrap .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 40%;
+}
+.user_info_wrap .user_btn .login_btn {
+  width: 200rpx;
+  font-size: 38rpx;
+}
+.nzx_mine {
+  width: 90%;
+  position: absolute;
+  top: 41vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nzx_mine .top_tool {
+  display: flex;
+  box-shadow: 2rpx 2rpx 2rpx #ccc;
+  border-radius: 10rpx;
+}
+.first_btn {
+  border-top-left-radius: 10rpx !important;
+  border-bottom-left-radius: 10rpx !important;
+}
+.clear_btn,.last_btn {
+  border-top-right-radius: 10rpx !important;
+  border-bottom-right-radius: 10rpx !important;
+}
+.nzx_mine .top_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rpx 0;
+  background-color: #fff;
+  margin: 0;
+  font-weight: normal;
+  font-size: inherit;
+  border-radius: unset;
+  overflow: visible;
+}
+
+.nzx_mine .top_tool .tool_item .clear_btn {
+  display: flex;
+  width: 22.5vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rpx 0;
+  background-color: #fff;
+  margin: 0;
+  font-weight: normal;
+  font-size: inherit;
+  border-radius: unset;
+}
+.nzx_mine .top_tool .tool_item .clear_color {
+  background-color: var(--themeColor);
+}
+.nzx_mine .top_tool .tool_item .clear_untap {
+  display: none;
+}
+.nzx_mine .top_tool .tool_item .clear_all,
+.nzx_mine .top_tool .tool_item .clear_part {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  padding: 12rpx;
+  transform: translateY(90rpx);
+  border-bottom: 1rpx solid #ccc;
+}
+.nzx_mine .top_tool .tool_item .clear_part {
+  transform: translateY(149rpx);
+}
+.nzx_mine .top_tool .tool_item .part_color {
+  background-color: var(--themeColor);
+}
+.nzx_mine .top_tool .tool_item .part_untap {
+  display: none;
+}
+.nzx_mine .top_tool .tool_item .part_tap {
+  display: block;
+  width: 25vw;
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-86%, 210rpx);
+  border: 1rpx solid var(--themeColor);
+}
+.nzx_mine .top_tool .tool_item .part_tap .part_item {
+  padding: 12rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+}
+.nzx_mine .set_tool { /** 计划表等按钮 */
+  margin-top: 20rpx;
+}
+.nzx_mine .set_tool .tap_style {
+  display: flex;
+  border-bottom: 1rpx solid rgba(204, 204, 204, 0.616);
+  padding: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.nzx_mine .set_tool .tap_style view {
+  display: flex;
+  align-items: center;
+}
+.nzx_mine .setting {
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(204, 204, 204, 0.616);
+  padding: 10rpx;
+  background-color: #fff;
+  justify-content: space-between;
+}
+.nzx_mine .setting .wx-switch-input {
+  width: 40px !important;
+  height: 20px !important;
+}
+.nzx_mine .setting .wx-switch-input::before {
+  width: 39px !important;
+  height: 20px !important;
+}
+.nzx_mine .setting .wx-switch-input::after {
+  width: 18px !important;
+  height: 18px !important;
+}
+.guide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(22, 23, 24, 0.5);
+}
+.guide .icon_loc1 {
+  position: absolute;
+  top: 38%;
+  left: 37%;
+  color: #fff;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .tip_text1 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background-color: #27c084;
+  padding: 15rpx 30rpx;
+  border-radius: 35rpx;
+  color: #fff;
+}
+.guide .icon_loc2 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  color: #fff;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .tip_text2 {
+  position: absolute;
+  top: 55%;
+  right: 10%;
+  background-color: #27c084;
+  padding: 15rpx 30rpx;
+  border-radius: 35rpx;
+  color: #fff;
+}
+.guide .icon_loc3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
+  border: 2rpx solid #fff;
+  padding: 15rpx 30rpx;
+  border-radius: 40rpx;
+  color: #fff;
+}
+.guide .icon_loc3 view {
+  padding: 5rpx;
+}
+.guide .know_icon {
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 80rpx;
+  color: #fff;
+}
+.guide .icon2_loc1 {
+  position: absolute;
+  top: 35%;
+  right: 12%;
+  color: #fff;
+  font-size: 60rpx;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .icon2_loc2 {
+  position: absolute;
+  top: 63%;
+  right: 4%;
+  color: #fff;
+  font-size: 60rpx;
+  text-shadow: 0 0 5rpx #27c084, 0 0 10rpx #27c084;
+}
+.guide .step {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transform: translate(20rpx, 100rpx);
+}
+.guide .step view {
+  padding: 10rpx;
+  margin: 10rpx;
+}
+.guide .step :first-child {
+  background-color: #27c084;
+  color: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.guide .img {
+  width: 190rpx;
+  height: 190rpx;
+  position: relative;
+  left: 10%;
+  top: 10%;
+  background-image: url(https://i.bmp.ovh/imgs/2021/07/a30d06dd80dbd46a.png);
+  background-size: cover;
+  border: 3rpx dotted #27c084;
+}
+.tap_style .iconfont {
+  margin-right: 10rpx;
+}

@@ -1,0 +1,64 @@
+<!-- <view class="section">
+  <checkbox-group bindchange="checkboxchange" >
+    <label>
+      <checkbox value = "value-1"/>点击文案也能选中radio
+    </label>
+  </checkbox-group>
+</view>
+ 
+<view class="section">
+  <label>
+    <switch/>点击文案切换开关
+  </label>
+</view>
+ 
+<view class="section">
+  <view class='title'>选中元素内第一个</view>
+  <checkbox-group>
+    <label for="checkbox">
+      <checkbox id ="checkbox" value="value-1"/>第一个
+      <checkbox value="value-1"/>第二个
+      <checkbox value="value-1"/>第三个
+      <checkbox value="value-1"/>第四个
+    </label>  
+  </checkbox-group>
+</view>
+ 
+<view class="section">
+  <view class="title">for属性优先级大于内部元素</view>
+  <checkbox-group>
+    <label for="mycheckbox">
+      <checkbox/>内部元素
+      <checkbox/>内部元素
+    </label>
+    <checkbox id ="mycheckbox"/>外部元素
+  </checkbox-group>
+</view> -->
+
+<view class="container">
+  <form action="" bindsubmit="formSubmit" bindreset="formReset">
+    <view>新增事项：</view>
+    <label class="items" for="">
+      <input class="setItems" name="remind" placeholder="请输入提醒事项" value="{{itemVal}}" bindinput="handleTextInput" />
+      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime"
+        bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+        <view class="setTime">
+          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}}
+          {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}</view>
+      </picker>
+    </label>
+    <radio-group class="radio_group" bindchange="radio_check">
+      <radio class="perpetual" value="0" checked>重复</radio>
+      <radio class="only" value="1">仅此一次</radio>
+    </radio-group>
+    <button form-type="submit">点击提交</button>
+  </form>
+</view>
+<!-- 引导页 -->
+<view class="guide" wx:if="{{guideIndex==0}}">
+  <view class="iconfont icon-jiantou icon_loc1"></view>
+  <view class="tip_text1">点击这里输入内容</view>
+  <view class="iconfont icon-jiantou icon_loc2"></view>
+  <view class="tip_text2">点击这里选择提醒时间</view>
+  <view class="iconfont icon-zhidaoliaox tip_text3" bindtap="handleKnow"></view>
+</view>
